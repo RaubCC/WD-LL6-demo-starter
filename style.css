@@ -144,7 +144,7 @@ header, .footer, footer {
 
 .testimonial-image img {
   width: 100%; /* Use full width of the card column */
-  max-width: 320px; /* Larger than before for better visibility */
+  max-width: 400px; /* Even larger for better visibility */
   height: auto; /* Keep aspect ratio */
   display: block;
   margin-left: auto;
