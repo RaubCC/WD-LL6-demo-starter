@@ -49,6 +49,69 @@ header, .footer, footer {
 
 /* The code above creates a soft blue to orange gradient for the background and uses semi-transparent white for foreground containers for readability. */
 
+/* High contrast styles for better accessibility
+  These styles use dark text on a light background for best readability
+*/
+body {
+  background-color: #fff; /* white background */
+  color: #111; /* very dark text */
+}
+
+.navbar, .footer {
+  background-color: #111 !important; /* very dark background */
+  color: #fff !important; /* white text */
+}
+
+.nav-link, .navbar-brand {
+  color: #fff !important; /* white text for navigation */
+}
+
+.nav-link.active, .nav-link:focus, .nav-link:hover {
+  color: #ffd700 !important; /* bright yellow for active/hovered links */
+  background-color: #222 !important;
+}
+
+.testimonial-card {
+  background-color: #f9f9f9; /* very light background for cards */
+  color: #111; /* dark text */
+  border: 2px solid #222;
+}
+
+.testimonial-number {
+  color: #222;
+  font-weight: bold;
+}
+
+.testimonial-author, .testimonial-location {
+  color: #333;
+}
+
+.btn-outline-dark {
+  color: #111;
+  border-color: #111;
+  background-color: #fff;
+}
+.btn-outline-dark:hover, .btn-outline-dark:focus {
+  color: #fff;
+  background-color: #111;
+  border-color: #111;
+}
+
+label, input, select, textarea {
+  color: #111;
+  background-color: #fff;
+}
+
+.form-control, .form-select {
+  border: 2px solid #222;
+}
+
+/* Add a focus style for accessibility */
+input:focus, select:focus, textarea:focus, button:focus {
+  outline: 3px solid #ffd700;
+  outline-offset: 2px;
+}
+
 /* Navbar Styles */
 .navbar {
   background-color: #f8f8f8;
