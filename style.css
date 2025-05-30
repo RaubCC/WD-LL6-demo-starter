@@ -143,10 +143,13 @@ header, .footer, footer {
 }
 
 .testimonial-image img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 50%;
+  width: 100%; /* Use full width of the card column */
+  max-width: 320px; /* Larger than before for better visibility */
+  height: auto; /* Keep aspect ratio */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
 }
 
 .testimonial-text {
