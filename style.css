@@ -150,6 +150,11 @@ input:focus, select:focus, textarea:focus, button:focus {
   color: #b0b0b0;
 }
 
+/* Make the testimonials heading black for accessibility */
+#testimonials-heading {
+  color: #111 !important;
+}
+
 .testimonial-card {
   height: 100%;
   padding: 20px;
