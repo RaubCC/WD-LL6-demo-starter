@@ -1,14 +1,14 @@
 body {
-  background-color: #eaeaea;
+  background-color: #fff; /* White background for best contrast */
+  color: #222; /* Very dark text for strong contrast */
   font-family: "Times New Roman", Times, serif;
-  color: #999;
   padding: 0;
   top: 0 !important;
 }
 
 /* Navbar Styles */
 .navbar {
-  background-color: #f8f8f8;
+  background-color: #222 !important; /* Very dark background */
   padding: 20px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -16,11 +16,11 @@ body {
 .navbar-brand {
   font-size: 22px;
   letter-spacing: 1px;
-  color: #aaa;
+  color: #fff !important; /* White text for contrast */
 }
 
 .nav-link {
-  color: #aaa !important;
+  color: #fff !important; /* White text for contrast */
   font-size: 14px;
   letter-spacing: 1px;
   margin: 0 10px;
@@ -29,7 +29,7 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-  color: #ccc !important;
+  color: #ffd700 !important; /* Gold/yellow for active link, high contrast */
 }
 
 /* Testimonials Section */
@@ -51,6 +51,11 @@ body {
   flex-direction: column;
   transition: all 0.3s ease;
   position: relative;
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
 }
 
 .testimonial-number {
@@ -162,27 +167,27 @@ body {
 
 /* Form styles */
 .form-control {
-  border: none;
+  border: 1px solid #222;
   border-radius: 0;
-  border-bottom: 1px solid #ccc;
   padding: 10px 0;
-  background-color: transparent;
+  background-color: #fff;
+  color: #222;
   box-shadow: none;
   font-size: 16px;
 }
 
 .form-control:focus {
   box-shadow: none;
-  border-color: #888;
+  border-color: #ffd700;
   background-color: inherit;
 }
 
 .form-select {
-  border: none;
+  border: 1px solid #222;
   border-radius: 0;
-  border-bottom: 1px solid #ccc;
   padding: 10px 0;
-  background-color: transparent;
+  background-color: #fff;
+  color: #222;
   font-size: 16px;
 }
 
@@ -205,8 +210,16 @@ textarea.form-control {
   letter-spacing: 1px;
   text-transform: uppercase;
   font-size: 14px;
-  color: #b0b0b0;
-  border-color: #d0d0d0;
+  color: #fff;
+  background-color: #222;
+  border-color: #222;
+}
+
+.btn-outline-dark:hover,
+.btn-outline-dark:focus {
+  background-color: #ffd700;
+  color: #222;
+  border-color: #ffd700;
 }
 
 /* Form validation styles */
@@ -263,6 +276,7 @@ textarea.form-control {
 }
 
 .footer {
-  background-color: #f9f9f9;
+  background-color: #222;
+  color: #fff;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
