@@ -212,6 +212,44 @@
   </script>
   <script type="text/javascript"
     src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Accessibility: Keyboard controls for testimonials -->
+  <script>
+    // Get all testimonial cards
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    testimonialCards.forEach(card => {
+      // Make each card focusable
+      card.setAttribute('tabindex', '0');
+      // Add keyboard event for Enter and Space to zoom in
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          // Toggle zoom effect
+          if (!card.classList.contains('zoomed')) {
+            card.classList.add('zoomed');
+            card.style.transform = 'scale(1.15)';
+            card.style.boxShadow = '0 8px 32px rgba(0,0,0,0.22)';
+          } else {
+            card.classList.remove('zoomed');
+            card.style.transform = '';
+            card.style.boxShadow = '';
+          }
+        }
+        // Allow Escape to remove zoom
+        if (e.key === 'Escape') {
+          card.classList.remove('zoomed');
+          card.style.transform = '';
+          card.style.boxShadow = '';
+        }
+      });
+      // Remove zoom when focus is lost
+      card.addEventListener('blur', function() {
+        card.classList.remove('zoomed');
+        card.style.transform = '';
+        card.style.boxShadow = '';
+      });
+    });
+  </script>
 </body>
 
 </html>
