@@ -166,12 +166,32 @@ input:focus, select:focus, textarea:focus, button:focus {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Accessible testimonial text: black color and friendly font */
+.testimonial-text,
+.testimonial-author,
+.testimonial-location,
+.testimonial-number {
+  background: none !important; /* Remove gradient */
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
+  color: #111 !important; /* Accessible black text */
+  font-family: 'Verdana', Arial, Helvetica, sans-serif !important; /* Friendly, easy-to-read font */
+  font-size: 1.1em;
+}
+
 .testimonial-card:focus-within,
 .testimonial-card:hover {
   /* Zoom in and add a shadow for easy reading */
   transform: scale(1.08);
   box-shadow: 0 8px 24px rgba(0,0,0,0.18);
   z-index: 2;
+}
+
+/* Add outline for keyboard accessibility */
+.testimonial-card:focus-within {
+  outline: 3px solid #ffd700;
+  outline-offset: 2px;
 }
 
 .testimonial-number {
