@@ -1,14 +1,22 @@
+/*
+  Accessibility improvement: Use a blue-to-orange vertical gradient background for the whole page.
+  Keep text and UI elements high contrast and easy to read.
+  Comments are included for beginners.
+*/
+
 body {
-  background-color: #fff; /* White background for best contrast */
-  color: #222; /* Very dark text for strong contrast */
+  /* Gradient background: blue at the top, orange at the bottom */
+  background: linear-gradient(to bottom, #1976d2 0%, #ff9800 100%);
+  color: #fff; /* White text for strong contrast on gradient */
+  min-height: 100vh;
   font-family: "Times New Roman", Times, serif;
   padding: 0;
   top: 0 !important;
 }
 
-/* Navbar Styles */
+/* Navbar: dark blue background, white text */
 .navbar {
-  background-color: #222 !important; /* Very dark background */
+  background-color: #0d223a !important; /* Very dark blue */
   padding: 20px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -44,28 +52,32 @@ body {
   color: #b0b0b0;
 }
 
+/* Testimonial cards: semi-transparent white background, dark text for contrast */
 .testimonial-card {
-  height: 100%;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.3s ease;
-  position: relative;
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.95); /* Almost white, slightly see-through */
   color: #222;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.testimonial-number {
-  text-align: left;
-  margin-bottom: 10px;
-  background-color: rgba(240, 240, 240, 0.9);
-  font-size: 14px;
-  font-weight: bold;
-  color: #999;
-  border-radius: 0 0 5px 0;
+/* Testimonial image: larger and centered */
+.testimonial-image img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+}
+.testimonial-image {
+  text-align: center;
 }
 
 /* Testimonial 1 */
@@ -102,23 +114,6 @@ body {
 
 .testimonial-3 .testimonial-image {
   margin-top: 20px;
-}
-
-/* Make testimonial images a bit larger for better visibility */
-.testimonial-image img {
-  /* Set a larger width and height, but keep it responsive */
-  width: 100%; /* Use full width of the card column */
-  max-width: 220px; /* Slightly larger than default */
-  height: auto; /* Maintain aspect ratio */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 8px; /* Optional: rounded corners for a friendly look */
-}
-
-/* Center the image container in the testimonial card */
-.testimonial-image {
-  text-align: center;
 }
 
 .testimonial-text {
@@ -166,13 +161,12 @@ body {
 }
 
 /* Form styles */
-.form-control {
-  border: 1px solid #222;
-  border-radius: 0;
-  padding: 10px 0;
+.form-control, .form-select {
   background-color: #fff;
   color: #222;
-  box-shadow: none;
+  border: 2px solid #1976d2;
+  border-radius: 0;
+  padding: 10px 0;
   font-size: 16px;
 }
 
@@ -180,15 +174,6 @@ body {
   box-shadow: none;
   border-color: #ffd700;
   background-color: inherit;
-}
-
-.form-select {
-  border: 1px solid #222;
-  border-radius: 0;
-  padding: 10px 0;
-  background-color: #fff;
-  color: #222;
-  font-size: 16px;
 }
 
 textarea.form-control {
@@ -204,42 +189,29 @@ textarea.form-control {
   margin-right: 8px;
 }
 
+/* Buttons: orange background, white text, blue on hover */
 .btn-outline-dark {
+  color: #fff;
+  background-color: #ff9800;
+  border-color: #ff9800;
   border-radius: 0;
   padding: 8px 30px;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-size: 14px;
-  color: #fff;
-  background-color: #222;
-  border-color: #222;
 }
 
 .btn-outline-dark:hover,
 .btn-outline-dark:focus {
-  background-color: #ffd700;
-  color: #222;
-  border-color: #ffd700;
+  background-color: #1976d2;
+  color: #fff;
+  border-color: #1976d2;
 }
 
-/* Form validation styles */
-.error-message {
-  display: none;
-  font-size: 12px;
-  color: #c0a0a0;
-  margin-top: 5px;
-  font-style: italic;
-  font-weight: 500;
-}
-
-.form-control.error,
-.form-select.error {
-  border-bottom: 1px solid #c0a0a0;
-}
-
-.radio-options.error {
-  padding-bottom: 5px;
-  border-bottom: 1px solid #c0a0a0;
+/* Add a visible orange focus outline for keyboard users */
+:focus {
+  outline: 2px solid #ff9800;
+  outline-offset: 2px;
 }
 
 /* Google Translate Widget styles */
@@ -275,8 +247,9 @@ textarea.form-control {
   display: none !important;
 }
 
+/* Footer: dark blue background, white text */
 .footer {
-  background-color: #222;
+  background-color: #0d223a;
   color: #fff;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
