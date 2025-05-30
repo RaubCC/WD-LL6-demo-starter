@@ -112,6 +112,7 @@ header, .footer, footer {
   margin-bottom: 15px;
   line-height: 1.5;
   color: #111;
+  text-shadow: 1px 1px 4px #e0e0e0; /* Light grey shadow for readability */
 }
 
 .testimonial-author {
@@ -119,12 +120,14 @@ header, .footer, footer {
   margin-bottom: 2px;
   font-size: 14px;
   color: #111;
+  text-shadow: 1px 1px 4px #e0e0e0; /* Light grey shadow for readability */
 }
 
 .testimonial-location {
   font-size: 12px;
   color: #aaa;
   margin-bottom: 0;
+  text-shadow: 1px 1px 4px #e0e0e0; /* Light grey shadow for readability */
 }
 
 .container {
